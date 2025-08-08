@@ -3,6 +3,7 @@
 	import CheckmarkIcon from './CheckmarkIcon.svelte';
 	import ErrorIcon from './ErrorIcon.svelte';
 	import LoaderIcon from './LoaderIcon.svelte';
+	import InfoIcon from './InfoIcon.svelte';
 
 	interface Props {
 		toast: Toast;
@@ -24,6 +25,8 @@
 			<div class="_sft-status">
 				{#if type === 'error'}
 					<ErrorIcon {...iconTheme} />
+				{:else if type === 'info'}
+					<InfoIcon {...iconTheme} />
 				{:else}
 					<CheckmarkIcon {...iconTheme} />
 				{/if}

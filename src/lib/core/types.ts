@@ -1,6 +1,6 @@
 import type { SvelteComponent } from 'svelte';
 
-export type ToastType = 'success' | 'error' | 'loading' | 'blank' | 'custom';
+export type ToastType = 'info' | 'success' | 'error' | 'loading' | 'blank' | 'custom';
 /** Specifies the toast's position on the screen
  *
  * Logical positions (`start`, `end`) are recommended over absolute positions
