@@ -5,6 +5,7 @@ declare const toast: {
     <T extends Record<string, unknown> = Record<string, unknown>>(message: Message<T>, opts?: ToastOptions<T>): string;
     error: ToastHandler;
     success: ToastHandler;
+    info: ToastHandler;
     loading: ToastHandler;
     custom: ToastHandler;
     dismiss(toastId?: string): void;

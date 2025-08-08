@@ -28,6 +28,7 @@ const createHandler = (type) => (message, options) => {
 const toast = (message, opts) => createHandler('blank')(message, opts);
 toast.error = createHandler('error');
 toast.success = createHandler('success');
+toast.info = createHandler('info');
 toast.loading = createHandler('loading');
 toast.custom = createHandler('custom');
 toast.dismiss = (toastId) => {

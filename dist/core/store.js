@@ -76,6 +76,7 @@ const defaultTimeouts = {
     blank: 4000,
     error: 4000,
     success: 2000,
+    info: 2000,
     loading: Infinity,
     custom: 4000
 };
