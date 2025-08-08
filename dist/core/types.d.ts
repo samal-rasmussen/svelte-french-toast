@@ -1,5 +1,5 @@
-import type { SvelteComponent } from 'svelte';
-export type ToastType = 'success' | 'error' | 'loading' | 'blank' | 'custom';
+import type { Component, SvelteComponent } from 'svelte';
+export type ToastType = 'info' | 'success' | 'error' | 'loading' | 'blank' | 'custom';
 /** Specifies the toast's position on the screen
  *
  * Logical positions (`start`, `end`) are recommended over absolute positions
@@ -8,7 +8,7 @@ export type ToastType = 'success' | 'error' | 'loading' | 'blank' | 'custom';
  * - Use `top-start` instead of `top-left`.
  * - Use `top-end` instead of `top-right`. */
 export type ToastPosition = 'top-left' | 'top-center' | 'top-right' | 'bottom-left' | 'bottom-center' | 'bottom-right' | 'top-start' | 'top-end' | 'bottom-start' | 'bottom-end';
-export type Renderable<T extends Record<string, unknown> = Record<string, unknown>> = typeof SvelteComponent<T> | string | null;
+export type Renderable<T extends Record<string, unknown> = Record<string, unknown>> = typeof SvelteComponent<T> | Component<T, any, any> | string | null;
 export interface IconTheme {
     primary: string;
     secondary: string;
