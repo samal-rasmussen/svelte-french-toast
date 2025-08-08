@@ -56,6 +56,7 @@ const toast = <T extends Record<string, unknown> = Record<string, unknown>>(
 
 toast.error = createHandler('error');
 toast.success = createHandler('success');
+toast.info = createHandler('info');
 toast.loading = createHandler('loading');
 toast.custom = createHandler('custom');
 
