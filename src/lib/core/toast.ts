@@ -49,7 +49,8 @@ const createHandler =
 		return toast.id;
 	};
 
-const toast = <T extends Record<string, unknown> = Record<string, unknown>>(
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const toast = <T extends Record<string, any> = Record<string, any>>(
 	message: Message<T>,
 	opts?: ToastOptions<T>
 ) => createHandler('blank')(message, opts);
